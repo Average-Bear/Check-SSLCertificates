@@ -28,8 +28,8 @@ function Check-SSLCertificates {
 
         $Stores = New-Object System.Security.Cryptography.X509Certificates.X509Store("\\$Server\root",$LM)
         $Stores.Open($RO)
-
         $Certs = $Stores.Certificates
+        
         foreach($Cert in $Certs) {
 
             [PSCustomObject] @{
